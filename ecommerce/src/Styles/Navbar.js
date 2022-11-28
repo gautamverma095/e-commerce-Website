@@ -68,6 +68,9 @@ export const Nav = styled.nav`
         display: inline-block;
         z-index: 9999;
         border: ${({ theme }) => theme.colors.black};
+
+
+        
         .mobile-nav-icon {
           font-size: 4.2rem;
           color: ${({ theme }) => theme.colors.black};
@@ -92,6 +95,7 @@ export const Nav = styled.nav`
         top: 0;
         left: 0;
         background-color: #fff;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -99,9 +103,12 @@ export const Nav = styled.nav`
         visibility: hidden;
         opacity: 0;
         transform: translateX(100%);
+
         /* transform-origin: top; */
+
         transition: all 3s linear;
       }
+
       .active .navbar-lists {
         visibility: visible;
         opacity: 1;
@@ -109,6 +116,8 @@ export const Nav = styled.nav`
         z-index: 999;
         transform-origin: right;
         transition: all 3s linear;
+
+
         .navbar-link {
           font-size: 4.2rem;
         }
