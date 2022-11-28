@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
    scrollbar-color: rgb(98 84 243);
     scrollbar-width: thin;
+    // border:6px solid red
 }
 
 body::-webkit-scrollbar {
@@ -37,6 +38,7 @@ body::-webkit-scrollbar-thumb {
     border: 5px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
+    // border:6px solid red
 }
 
 h1,
@@ -71,6 +73,7 @@ p, button {
   font-size: 1.65rem;
   line-height: 1.5;
   font-weight:400;
+  // border:6px solid red
 }
 
 a {
@@ -87,11 +90,13 @@ ${"" /* resuable code section  */}
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  // border:6px solid red
 }
 
 .grid {
   display: grid;
   gap: 9rem;
+  // border:6px solid blue
 }
 
 .grid-two-column {
@@ -116,12 +121,14 @@ ${"" /* resuable code section  */}
       font-weight: 600;
       margin-bottom: 6rem;
       text-transform: capitalize;
+      border:6px solid red
     }
 
      .intro-data {
       margin-bottom: 0;
       text-transform: uppercase;
       color: #5138ee;
+      // border:6px solid red
     }
 
    .caption {
@@ -134,6 +141,7 @@ ${"" /* resuable code section  */}
       padding: 0.8rem 2rem;
       font-size: 1.2rem;
       border-radius: 2rem;
+      // border:6px solid red
     }
 
 input, textarea{
@@ -143,6 +151,7 @@ input, textarea{
     border: 1px solid ${({ theme }) => theme.colors.border};
     text-transform: uppercase;
    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
+  //  border:6px solid red
 }
     input[type="submit"]{
     max-width: 16rem;
@@ -171,7 +180,9 @@ input, textarea{
 
 .grid{
   gap: 3.2rem;
+  // border:6px solid brown;
 }
+
       .grid-two-column , .grid-three-column, .grid-four-column{
           grid-template-columns: 1fr;
         }

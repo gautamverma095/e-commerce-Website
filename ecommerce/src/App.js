@@ -43,9 +43,9 @@ function App() {
     <ThemeProvider theme={theme}>
    
     <Router>
-     <GlobalStyle/>
+    <GlobalStyle/>
     <Header/>
-    
+ 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

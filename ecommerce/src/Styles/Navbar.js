@@ -6,6 +6,7 @@ export const Nav = styled.nav`
       display: flex;
       gap: 4.8rem;
       align-items: center;
+      // border:6px solid blue;
       .navbar-link {
         &:link,
         &:visited {
@@ -16,10 +17,12 @@ export const Nav = styled.nav`
           text-transform: uppercase;
           color: ${({ theme }) => theme.colors.black};
           transition: color 0.3s linear;
+          // border:6px solid blue;
         }
         &:hover,
         &:active {
           color: ${({ theme }) => theme.colors.helper};
+          
         }
       }
     }
@@ -28,6 +31,7 @@ export const Nav = styled.nav`
       background-color: transparent;
       cursor: pointer;
       border: none;
+      // border:6px solid blue;
     }
     .mobile-nav-icon[name="close-outline"] {
       display: none;
@@ -40,6 +44,7 @@ export const Nav = styled.nav`
       .cart-trolley {
         position: relative;
         font-size: 3.2rem;
+        // border:6px solid green;
       }
       .cart-total--item {
         width: 2.4rem;
@@ -84,6 +89,7 @@ export const Nav = styled.nav`
         right: 10%;
         color: ${({ theme }) => theme.colors.black};
         z-index: 9999;
+       
       }
       .active .close-outline {
         display: inline-block;
@@ -95,6 +101,7 @@ export const Nav = styled.nav`
         top: 0;
         left: 0;
         background-color: #fff;
+       
 
         display: flex;
         justify-content: center;
