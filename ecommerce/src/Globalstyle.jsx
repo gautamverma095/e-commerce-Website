@@ -121,7 +121,7 @@ ${"" /* resuable code section  */}
       font-weight: 600;
       margin-bottom: 6rem;
       text-transform: capitalize;
-      // border:6px solid red
+      border:6px solid red
     }
 
      .intro-data {
