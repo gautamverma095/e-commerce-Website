@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from "styled-components"
 import { FiShoppingCart } from "react-icons/fi"
 import { Nav } from '../Styles/Navbar'
 import { CgMenu, CgClose } from "react-icons/cg";

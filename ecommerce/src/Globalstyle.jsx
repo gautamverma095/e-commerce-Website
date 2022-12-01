@@ -14,12 +14,13 @@ html {
   font-size: 62.5%;
   /* scroll-behavior: smooth; */
   /* 1rem = 10px */
-  overflow-x: hidden;
+  overflow-x: hidden;  /* Hide horizontal scrollbar */
 }
 
 body {
   overflow-x: hidden;
-   scrollbar-color: rgb(98 84 243);
+  //  scrollbar-color: rgb(98 84 243);
+   scrollbar-color: blue;
     scrollbar-width: thin;
     // border:6px solid red
 }
@@ -38,7 +39,6 @@ body::-webkit-scrollbar-thumb {
     border: 5px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
-    // border:6px solid red
 }
 
 h1,
@@ -50,7 +50,7 @@ h4 {
 }
 
 h1 {
-  color: ${({ theme }) => theme.colors.heading};
+ color: ${({theme}) => theme.colors.heading}
   font-size: 6rem;
   font-weight: 900;
 }
