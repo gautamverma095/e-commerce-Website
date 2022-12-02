@@ -24,7 +24,7 @@ const HeroSection = ({ myData }) => {
 
             </NavLink>
           </div>
-          {/* our image */}
+          {/* our main image */}
 
           <div className='hero-section-image'>
 

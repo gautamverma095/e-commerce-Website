@@ -7,6 +7,8 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
+  
+  
 }
 
 
@@ -26,7 +28,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 1.5rem;
+  width: 0.8rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -50,7 +52,7 @@ h4 {
 }
 
 h1 {
- color: ${({theme}) => theme.colors.heading}
+ color: ${({theme}) => theme.colors.heading};
   font-size: 6rem;
   font-weight: 900;
 }
@@ -90,7 +92,7 @@ ${"" /* resuable code section  */}
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  // border:6px solid red
+  border:6px solid red
 }
 
 .grid {
@@ -101,15 +103,18 @@ ${"" /* resuable code section  */}
 
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
+  
 
 }
 
 .grid-three-column {
   grid-template-columns: repeat(3, 1fr);
+  
 }
 
 .grid-four-column{
    grid-template-columns: 1fr 1.2fr .5fr .8fr ;
+   border: 2px solid blue
 }
 
 .grid-five-column{
@@ -128,7 +133,6 @@ ${"" /* resuable code section  */}
       margin-bottom: 0;
       text-transform: uppercase;
       color: #5138ee;
-      // border:6px solid red
     }
 
    .caption {
@@ -141,7 +145,7 @@ ${"" /* resuable code section  */}
       padding: 0.8rem 2rem;
       font-size: 1.2rem;
       border-radius: 2rem;
-      // border:6px solid red
+      border:6px solid red
     }
 
 input, textarea{

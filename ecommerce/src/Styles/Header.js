@@ -8,7 +8,7 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  // border:6px solid blue;
+  /* border:6px solid blue; */
   .logo {
     height: 5rem;
     // border:6px solid blue;

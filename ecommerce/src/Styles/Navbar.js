@@ -6,7 +6,7 @@ export const Nav = styled.nav`
       display: flex;
       gap: 4.8rem;
       align-items: center;
-      // border:6px solid blue;
+       /* border:6px solid blue; */
       .navbar-link {
         &:link,
         &:visited {

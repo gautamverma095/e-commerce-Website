@@ -2,9 +2,9 @@
 import styled from "styled-components";
 export const FooterStyle = styled.section`
 
-  .iSIFGq {
+/* .iSIFGq {
     margin: 0;
-  }
+  } */
   .contact-short {
     max-width: 60vw;
     margin: auto;
@@ -19,11 +19,17 @@ export const FooterStyle = styled.section`
     }
   }
   footer {
+    border: 2px solid blue;
     padding: 14rem 0 9rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    background-color: rgb(45 45 45);
     h3 {
       color: ${({ theme }) => theme.colors.hr};
       margin-bottom: 2.4rem;
+    }
+    a{
+      color: ${({ theme }) => theme.colors.hr};
+      margin-bottom: 2.4rem;
+      font-size: 18px;
     }
     p {
       color: ${({ theme }) => theme.colors.white};
