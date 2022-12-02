@@ -2,9 +2,6 @@
 import styled from "styled-components";
 export const FooterStyle = styled.section`
 
-/* .iSIFGq {
-    margin: 0;
-  } */
   .contact-short {
     max-width: 60vw;
     margin: auto;
@@ -61,6 +58,7 @@ export const FooterStyle = styled.section`
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .contact-short {
       max-width: 80vw;
+      /* border: 2px solid green; */
       margin: 4.8rem auto;
       transform: translateY(0%);
       text-align: center;
