@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Footer from './Components/Footer'
-import HeroSection from './Components/HeroSection'
-import Services from './Components/Services'
-import Trusted from './Components/Trusted'
+import Footer from '../Components/Footer'
+import HeroSection from '../Components/HeroSection'
+import Services from '../Components/Services'
+import Trusted from '../Components/Trusted'
 
  const Home = () => {
 

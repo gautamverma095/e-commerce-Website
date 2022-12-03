@@ -1,16 +1,12 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import React from "react";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import Products from "./Products";
-import SingleProduct from "./SingleProduct";
-import Cart from "./Cart";
-import Error from "./Error";
+
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import {GlobalStyle} from "./Globalstyle"
 import { ThemeProvider } from "styled-components";
+
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
 
@@ -19,20 +15,10 @@ function App() {
 
     <ThemeProvider theme={theme}>
    
-    <Router>
     <GlobalStyle/>
     <Header/>
- 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/singleproduct/:id" element={<SingleProduct />} />
-        <Route path="/*" element={<Error />} />
-      </Routes>
+    <AllRoutes/>
       <Footer/>
-    </Router>
     </ThemeProvider>
   );
 }
