@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import FeaturedProducts from '../Components/FeaturedProducts'
 import Footer from '../Components/Footer'
 import HeroSection from '../Components/HeroSection'
 import Services from '../Components/Services'
@@ -17,6 +18,7 @@ import Trusted from '../Components/Trusted'
     <>
     <HeroSection myData = {data}/>
     <Services/>
+    <FeaturedProducts/>
     <Trusted/>
   
     </>

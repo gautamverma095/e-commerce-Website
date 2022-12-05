@@ -33,6 +33,7 @@ const Navbar = () => {
               <span className='cart-total--item'>10</span>
             </NavLink>
           </li>
+          
         </ul>
 
         {/*two buttons for open and close menu*/}

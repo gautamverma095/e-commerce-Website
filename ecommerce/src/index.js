@@ -5,16 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import ProductContext from './context/ProductContext';
+import { FilterContextProvider } from './context/FilterContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <ProductContext>
+
+  <FilterContextProvider>
   <BrowserRouter>
  
 
     <App />
+
    
     </BrowserRouter>
+     
+  </FilterContextProvider>
     </ProductContext>
   </React.StrictMode>
 );

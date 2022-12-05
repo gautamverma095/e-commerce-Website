@@ -98,7 +98,7 @@ ${"" /* resuable code section  */}
 .grid {
   display: grid;
   gap: 9rem;
-  // border:6px solid blue
+  border:6px solid blue
 }
 
 .grid-two-column {
@@ -145,7 +145,7 @@ ${"" /* resuable code section  */}
       padding: 0.8rem 2rem;
       font-size: 1.2rem;
       border-radius: 2rem;
-      border:6px solid red
+      // border:6px solid red
     }
 
 input, textarea{
