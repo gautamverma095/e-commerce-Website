@@ -24,10 +24,11 @@ const Sort = () => {
     <form action="#">
     <select name="sort" id="sort" className='sort-selection--style' onChange={toggleSort}>
     
-    <option value="lth">Price(low to high)</option>
+   <option value="htl">Price(high to low)</option>
     <option value="#"  disabled></option>
 
-    <option value="htl">Price(high to low)</option>
+           
+              <option value="lth">Price(low to high)</option>
     <option value="#" disabled></option>
 
     <option value="a-z">Price(a to z)</option>

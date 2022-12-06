@@ -4,70 +4,76 @@ import { FaCheck } from "react-icons/fa";
 import CartAmount from './CartAmount';
 import { NavLink } from 'react-router-dom';
 import { Button } from '../Styles/Button';
+import { UseCartContext } from '../context/CartContext';
 
 
 
-const Addtocart = ({product}) => {
+const Addtocart = ({ product }) => {
 
-    const {id,colors,stock} = product
-    const [color,setColor] = useState(colors[0])
-    const [amount,setAmount] = useState(1)
+  const { id, colors, stock } = product
+  const [color, setColor] = useState(colors[0])
+  const [amount, setAmount] = useState(1)
+    
+  const { addToCart } = UseCartContext()
 
-    const increaseAmount = () => {
 
-      amount < stock ? setAmount(amount+1) : setAmount(stock)
 
-    }
-    const decreaseAmount = () => {
 
-      amount > 0 ? setAmount(amount-1) : setAmount(1)
-      
-    }
+  const increaseAmount = () => {
+
+    amount < stock ? setAmount(amount + 1) : setAmount(stock)
+
+  }
+  const decreaseAmount = () => {
+
+    amount > 0 ? setAmount(amount - 1) : setAmount(1)
+
+  }
 
 
   return (
     <AddToCartStyles>
 
 
-    <div className="colors">
-    
-    <p>
-    Colors:
+      <div className="colors">
 
-    {
-        colors.map((el,index) => {
-            return (
-                
-                <button key={index}  style = {{backgroundColor : el,}} 
-                className = {color === el  ? "btnStyle active" : "btnStyle"}
-                
+        <p>
+          Colors:
+
+          {
+            colors.map((el, index) => {
+              return (
+
+                <button key={index} style={{ backgroundColor: el, }}
+                  className={color === el ? "btnStyle active" : "btnStyle"}
+
                 >
-                {color === el ? <FaCheck/> :null}
+                  {color === el ? <FaCheck /> : null}
                 </button>
-                
-                
-            )
-        })
-    }
-    </p>
-    
-    </div>
-  
-    
-    
-<CartAmount 
- amount = {amount}
-  increaseAmount ={increaseAmount}
-   decreaseAmount = {decreaseAmount}   />
 
 
-   <NavLink to="/cart">
-   <Button className='btn'>
-   Add To Cart
-   
-   </Button>
-   </NavLink>
-     
+              )
+            })
+          }
+        </p>
+
+      </div>
+
+
+
+      <CartAmount
+        amount={amount}
+        increaseAmount={increaseAmount}
+        decreaseAmount={decreaseAmount} />
+
+
+      <NavLink to="/cart" onClick={() => addToCart(id, color, colors, amount, product)}>
+        <Button className='btn'>
+          Add To Cart
+
+        </Button>
+      </NavLink>
+
     </AddToCartStyles>
   )
 }

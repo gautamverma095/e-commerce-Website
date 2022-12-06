@@ -1,12 +1,14 @@
 import React from 'react'
 import { useFilterContext } from '../context/FilterContext'
+import { FormatPrice } from '../help/help'
+import { Button } from '../Styles/Button'
 import { FilterSectionStyles } from '../Styles/FilterSection'
 
 const FilterSection = () => {
 
-    const { filter: { text, category,color }, toggleSearch, all_products } = useFilterContext()
+    const { filter: { text, category,color,price,maxPrice,minPrice }, toggleSearch, all_products,clearFilter } = useFilterContext()
 
-
+  
 
     const uniqueData = (data, unique) => {
 
@@ -123,7 +125,33 @@ const FilterSection = () => {
                 
 
 
-</div>
+            </div>
+            
+
+
+            <div className="filter_price">
+                <h3>Price</h3>
+                <p><FormatPrice price={price}/></p>
+                <input
+                    type="range"
+                    step="10"
+                    min={minPrice}
+                    max={maxPrice}
+                    value={price}
+                    name ="price"
+                    onChange={toggleSearch}
+                
+                />
+            
+            </div>
+
+            <div className="filter-clear">
+            
+                <Button className='btn' onClick={clearFilter}>
+                Clear Filters
+                
+                </Button>
+            </div>
         </ FilterSectionStyles>
     )
 }

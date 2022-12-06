@@ -7,13 +7,16 @@ const Filtercontext = createContext()
 const initialState = {
     filter_products:[],
     all_products:[],
-    grid_view:false,
-    sort_val:"lth",
+    grid_view:true,
+    sort_val:"htl",
     filter: {
         text:"",
-        cateogry:"All",
+        category:"All",
       company: "All",
-        color:"All"
+      color: "All",
+      price: 0,
+      maxPrice: 0,
+        minPrice:0 
     }
 }
 
@@ -42,6 +45,13 @@ const toggleSearch = (event) => {
 
     dispatch({type:"SEARCH_FILTER_VAL",payload:{name,value}})
 }
+  
+  // clear all filters
+
+  const clearFilter = () => {
+    dispatch({type:"CLEAR_FILTERS"})
+
+  }
 
 
 
@@ -61,14 +71,14 @@ const toggleSearch = (event) => {
 
 
 useEffect(() => {
-dispatch({type:"FILTER_PRODUCTS",payload:products})
+  dispatch({ type: "FILTER_PRODUCTS", payload: products })
 
 },[products])
 
 
 return (
 
-    <Filtercontext.Provider value={{...state , setGrid,toggleSort,toggleSearch}} >
+    <Filtercontext.Provider value={{...state , setGrid,toggleSort,toggleSearch,clearFilter}} >
     
     {children}
     </Filtercontext.Provider>
