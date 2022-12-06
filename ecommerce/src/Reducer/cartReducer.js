@@ -4,7 +4,6 @@ const CartReducer = (state, action) => {
 
     if (action.type === "ADD_TO_CART") {
         const { id, color, colors, amount, product } = action.payload
-        console.log(action.payload);
 
         let checkingExisting = state.cart.find((el) => {
             return el.id === id
@@ -77,6 +76,86 @@ const CartReducer = (state, action) => {
             ...state,
             cart: []
         }
+
+    }
+
+    if (action.type === "INCREMENT_AMOUNT") {
+        // vaishali13
+        let newAmount
+        let updatedAmount = state.cart.map((el) => {
+            if (el.id === action.payload)  // vaishali13 === vaishali13
+            {
+                if (el.amount < el.max)
+                {
+                     newAmount = el.amount + 1
+                }
+                else {
+                    newAmount = el.amount
+                }
+              
+                
+
+                return {
+                    ...el,
+                    amount:newAmount
+                }
+                
+            }
+            else {
+                return el
+            }
+
+
+        })
+
+        return {
+            ...state,
+            cart:updatedAmount
+        }
+
+
+
+
+    }
+    if (action.type === "DECREMENT_AMOUNT") {
+        // vaishali13
+        let newAmount
+        let updatedAmount = state.cart.map((el) => {
+            
+            if (el.id === action.payload)  // vaishali13 === vaishali13
+            {
+                
+                if (el.amount > 1) {
+
+                    console.log(el.amount);
+                    newAmount = el.amount - 1
+                }
+                else {
+                    newAmount = el.amount
+                }
+            
+
+
+                return {
+                    ...el,
+                    amount: newAmount
+                }
+
+            }
+            else {
+                return el
+            }
+
+
+        })
+
+        return {
+            ...state,
+            cart: updatedAmount
+        }
+
+
+
 
     }
     return state

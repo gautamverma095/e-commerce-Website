@@ -59,11 +59,11 @@ export const CartContextProvider = ({ children }) => {
 
     const increaseAmount = (id) => {
 
-        console.log(id);
+        dispatch({type:"INCREMENT_AMOUNT",payload:id})
 
     }
     const decreaseAmount = (id) => {
-        console.log(id);
+        dispatch({ type: "DECREMENT_AMOUNT", payload: id })
 
     }
 
