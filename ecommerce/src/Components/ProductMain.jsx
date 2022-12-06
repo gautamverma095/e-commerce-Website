@@ -9,8 +9,6 @@ const ProductMain = () => {
 
   const {filter_products,grid_view} = useFilterContext()
 
-  console.log(filter_products);
-
  if(grid_view)
  {
    return <Gridview   products = {filter_products}/>

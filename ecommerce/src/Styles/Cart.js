@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 export const CartStyles = styled.section`
+
   padding: 9rem 0;
   .grid-four-column {
     grid-template-columns: repeat(4, 1fr);
@@ -17,6 +18,10 @@ export const CartStyles = styled.section`
   }
   hr {
     margin-top: 1rem;
+  }
+  .cart-hide{
+    border: 4px solid blue;
+    display: grid;
   }
   .cart-item {
     padding: 3.2rem 0;

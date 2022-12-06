@@ -27,8 +27,6 @@ const SingleProduct = () => {
 
 
   const { id: shh, name, company, stars, reviews, price, description, images, stock ,image} = singleProduct
-
-console.log("object",images);
   if (isSingleLoading) {
     return <h1>...Loading</h1>
   }
