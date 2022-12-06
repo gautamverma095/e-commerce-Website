@@ -9,7 +9,7 @@ const CartAmount = ({amount,increaseAmount,decreaseAmount}) => {
     
     <div className="amount-toggle">
     <button onClick={() => decreaseAmount() }><FaMinus/></button>
-    <div className='amount-style'>{amount}</div>
+        <div className='amount-style'>{amount} </div>
     <button onClick={() => increaseAmount() }><FaPlus/></button>
     
     </div>

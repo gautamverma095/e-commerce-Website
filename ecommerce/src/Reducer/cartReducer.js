@@ -4,6 +4,7 @@ const CartReducer = (state, action) => {
 
     if (action.type === "ADD_TO_CART") {
         const { id, color, colors, amount, product } = action.payload
+        console.log(action.payload);
 
         let checkingExisting = state.cart.find((el) => {
             return el.id === id
@@ -14,15 +15,21 @@ const CartReducer = (state, action) => {
 
             let updatedProducts = state.cart.map((el) => {
                 if (el.id === id) {
+                    newAmount = el.amount + amount
 
+
+                    if (newAmount >= el.max) {
+                        newAmount = el.max
+                    }
                     return {
                         ...el,
-                        amount: el.amount + amount
+                        amount: newAmount
                     }
                 }
                 else {
                     return el
                 }
+
 
             })
 

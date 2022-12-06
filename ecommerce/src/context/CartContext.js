@@ -4,7 +4,7 @@ import reducer from "../Reducer/cartReducer";
 
 const CartContext = createContext()
 const intialState = {
-    cart:   JSON.parse(localStorage.getItem("Products")) || [],
+    cart: JSON.parse(localStorage.getItem("Products")) || [],
     totalItem: "",
     totalAmount: "",
     shippingFee: 500
@@ -16,10 +16,10 @@ const intialState = {
 export const CartContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, intialState)
- 
 
 
-    
+
+
 
     const addToCart = (id, color, colors, amount, product) => {
 
@@ -40,10 +40,10 @@ export const CartContextProvider = ({ children }) => {
     }
 
 
-        // localStorage
-    
+    // localStorage
+
     useEffect(() => {
-      localStorage.setItem("Products",JSON.stringify(state.cart))
+        localStorage.setItem("Products", JSON.stringify(state.cart))
 
 
     }, [state.cart])
@@ -51,15 +51,26 @@ export const CartContextProvider = ({ children }) => {
 
     // clear cart
     const clearCart = () => {
-        dispatch({type:"CLEAR_CART"})
+        dispatch({ type: "CLEAR_CART" })
 
     }
-    
+
+    // increaseAmount and decreaseAmount in the cart
+
+    const increaseAmount = (id) => {
+
+        console.log(id);
+
+    }
+    const decreaseAmount = (id) => {
+        console.log(id);
+
+    }
 
     return (
 
 
-        <CartContext.Provider value={{ ...state, addToCart, toggleDelete, clearCart}}>
+        <CartContext.Provider value={{ ...state, addToCart, toggleDelete, clearCart, decreaseAmount, increaseAmount }}>
 
             {children}
 
