@@ -44,7 +44,7 @@ export const ServicesStyle = styled.section`
       flex: 1;
       justify-content: center;
       align-items: center;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
       box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
       // border:6px solid brown;
       div {

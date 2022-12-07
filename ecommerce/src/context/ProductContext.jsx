@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
 import { useEffect } from "react"
 import { createContext } from 'react'
-import { getProducts } from '../Utils/utils';
 import reducer from "../Reducer/productReducer.js"
 import axios  from 'axios';
 const API = "https://enchanting-gray-housecoat.cyclic.app/products"

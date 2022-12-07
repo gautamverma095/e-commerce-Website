@@ -16,7 +16,7 @@ export const FooterStyle = styled.section`
     }
   }
   footer {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     padding: 14rem 0 9rem 0;
     background-color: rgb(45 45 45);
     h3 {

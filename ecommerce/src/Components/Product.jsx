@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { TbCurrencyRupee } from "react-icons/tb";
 import { FormatPrice } from '../help/help';
 
 const Product = (props) => {

@@ -19,7 +19,7 @@ figure {
   align-items: center;
   position: relative;
   overflow: hidden;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   transition: all 0.5s linear;
   &::after {
     content: "";
@@ -77,7 +77,7 @@ figure {
   .card-data--price {
     color: ${({ theme }) => theme.colors.helper};
     font-size:20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   .btn {
     margin: 2rem auto;

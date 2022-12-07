@@ -20,7 +20,7 @@ export const CartStyles = styled.section`
     margin-top: 1rem;
   }
   .cart-hide{
-    border: 4px solid blue;
+    /* border: 4px solid blue; */
     display: grid;
   }
   .cart-item {
@@ -31,10 +31,13 @@ export const CartStyles = styled.section`
   }
   .cart-user--profile {
     display: flex;
-    justify-content: flex-start;
+    width: 84%;
+    margin: auto;
+    justify-content: start;
     align-items: center;
     gap: 1.2rem;
     margin-bottom: 5.4rem;
+    /* border: 3px solid green; */
     img {
       width: 8rem;
       height: 8rem;

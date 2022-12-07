@@ -7,7 +7,8 @@ const intialState = {
     cart: JSON.parse(localStorage.getItem("Products")) || [],
     totalItem: "",
     totalAmount: "",
-    shippingFee: 500
+    shippingFee: 500,
+
 
 
 }
@@ -43,6 +44,10 @@ export const CartContextProvider = ({ children }) => {
     // localStorage
 
     useEffect(() => {
+
+        dispatch({ type: "TOTAL_CART_ITEMS" })
+        dispatch({ type: "TOTAL_CART_PRICE" })
+        
         localStorage.setItem("Products", JSON.stringify(state.cart))
 
 

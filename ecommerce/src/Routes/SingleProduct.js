@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import PageNavigation from '../Components/PageNavigation'
 import ProductImage from '../Components/ProductImage'
@@ -20,9 +20,10 @@ const SingleProduct = () => {
 
 
   useEffect(() => {
+
     getSingleProduct(`${api}?id=${id}`)
 
-  }, [id])
+  },[id] )
 
 
 

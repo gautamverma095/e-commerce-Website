@@ -1,8 +1,11 @@
 import React from 'react'
 
 import styled from "styled-components"
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Contact = () => {
+
+  const { user, isAuthenticated } = useAuth0();
   return (
     <Wrapper>
       <h2 className='common-heading'>Contact Page</h2>
@@ -14,12 +17,12 @@ const Contact = () => {
 
           <form method='POST' className='contact-inputs' action='https://formspree.io/f/mjvzqbvd' >
 
-            <input type="text" placeholder='username' name="username" required autoComplete='off' />
+            <input  value={isAuthenticated ? user.name : ""} type="text" placeholder='username' name="username" required autoComplete='off' />
 
-    <input type="email" placeholder='Email' name='Email' required autoComplete='off'  />
-    <textarea name="Message" placeholder='Enter your message' id="" cols="30" rows="10"></textarea>
+            <input value={isAuthenticated ? user.email : ""} type="email" placeholder='Email' name='Email' required autoComplete='off' />
+            <textarea name="Message" placeholder='Enter your message' id="" cols="30" rows="10"></textarea>
 
-    <input type="submit" value="Send" />
+            <input type="submit" value="Send" />
           </form>
 
 

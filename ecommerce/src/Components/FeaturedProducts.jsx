@@ -8,7 +8,7 @@ import Product from './Product';
 
 const FeaturedProducts = () => {
 
-    const  {isLoading,isError,products,featuredProducts} = useContext(Appcontext)
+    const  {isLoading,featuredProducts} = useContext(Appcontext)
 
     if(isLoading)
     {

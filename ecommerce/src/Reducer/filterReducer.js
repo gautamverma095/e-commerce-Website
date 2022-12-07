@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils";
 
 const filterReducer = (state, action) => {
 
@@ -10,7 +9,7 @@ const filterReducer = (state, action) => {
         })
 
         let maxPrice = Math.max.apply(null, priceArr)
-        console.log(maxPrice);
+        // console.log(maxPrice);
 
 
         return {
@@ -115,11 +114,11 @@ const filterReducer = (state, action) => {
                 return el.company === company
             })
         }
-        if (price == 0) {
+        if (price === 0) {
             tempFiltered = tempFiltered.filter((el) => {
 
 
-                return (+el.price) == price
+                return (+el.price) === price
 
             })
 

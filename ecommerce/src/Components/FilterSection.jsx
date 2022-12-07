@@ -6,7 +6,7 @@ import { FilterSectionStyles } from '../Styles/FilterSection'
 
 const FilterSection = () => {
 
-    const { filter: { text, category,color,price,maxPrice,minPrice }, toggleSearch, all_products,clearFilter } = useFilterContext()
+    const { filter: { text,color,price,maxPrice,minPrice }, toggleSearch, all_products,clearFilter } = useFilterContext()
 
   
 

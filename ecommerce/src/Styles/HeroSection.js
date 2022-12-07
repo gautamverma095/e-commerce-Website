@@ -28,12 +28,12 @@ padding: 12rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     
   }
   figure {
     position: relative;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
 
     &::after {
@@ -46,7 +46,7 @@ padding: 12rem 0;
       left: 50%;
       top: -5rem;
       z-index: -1;
-      border: 2px solid red;
+      /* border: 2px solid red; */
     }
   }
   .img-style {

@@ -2,7 +2,6 @@ import React from 'react'
 import FilterSection from '../Components/FilterSection'
 import ProductMain from '../Components/ProductMain'
 import Sort from '../Components/Sort'
-import { useFilterContext } from '../context/FilterContext'
 import { ProductStyles } from '../Styles/Product'
 
  const Products = () => {

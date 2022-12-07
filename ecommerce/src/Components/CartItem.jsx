@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FormatPrice } from '../help/help';
 import CartAmount from './CartAmount';
 import { FaTrash } from "react-icons/fa";
 import { UseCartContext } from '../context/CartContext';
 
-const CartItem = ({ id, name, image, price, amount, color, stock }) => {
+const CartItem = ({ id, name, image, price, amount, color }) => {
 
     const { toggleDelete,increaseAmount,decreaseAmount  } = UseCartContext()
 
@@ -32,7 +32,7 @@ const CartItem = ({ id, name, image, price, amount, color, stock }) => {
             </div>
 
             <div className='cart-hide'>
-                <p><FormatPrice price={price} /></p>
+                <p><FormatPrice price={price}/></p>
 
             </div>
 

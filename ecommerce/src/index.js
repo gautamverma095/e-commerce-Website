@@ -7,26 +7,42 @@ import { BrowserRouter } from 'react-router-dom';
 import ProductContext from './context/ProductContext';
 import { FilterContextProvider } from './context/FilterContext';
 import { CartContextProvider } from './context/CartContext';
+import { Auth0Provider } from "@auth0/auth0-react";
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const domain = process.env.REACT_APP_DOMAIN
+const clientid = process.env.REACT_APP_CLIENT_ID
+
 root.render(
-  <React.StrictMode>
-    <ProductContext>
 
-      <FilterContextProvider>
-        <BrowserRouter>
+  <Auth0Provider
+    domain={domain}
+    clientId={clientid}
+    redirectUri={window.location.origin}
+  >
+    <React.StrictMode>
+      <ProductContext>
 
-          <CartContextProvider>
+        <FilterContextProvider>
+          <BrowserRouter>
+
+            <CartContextProvider>
 
 
-            <App />
-          </CartContextProvider>
+              <App />
+            </CartContextProvider>
 
 
-        </BrowserRouter>
+          </BrowserRouter>
 
-      </FilterContextProvider>
-    </ProductContext>
-  </React.StrictMode>
+        </FilterContextProvider>
+      </ProductContext>
+    </React.StrictMode>
+  </Auth0Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
