@@ -5,7 +5,7 @@ import HeroSection from '../Components/HeroSection'
 
 
   const data = {
-    name:"Vaishali Ecommerce"
+    name:"Hues With Vaishali"
  
   }
 

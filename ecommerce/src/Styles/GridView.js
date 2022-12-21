@@ -25,7 +25,7 @@ export const GridViewStyles = styled.section`
       width: 0%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-      transition: all 0.2s linear;
+      transition: all 0.2s toolbar;
       cursor: pointer;
     }
     &:hover::after {

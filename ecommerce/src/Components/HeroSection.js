@@ -15,7 +15,11 @@ const HeroSection = ({ myData }) => {
             <p className='intro-data'>welcome to        </p>
             <h1>{myData.name}</h1>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores cupiditate quidem, hic nam et dolorem amet incidunt provident id. Impedit saepe amet sed laudantium quod voluptas eveniet commodi accusantium architecto!</p>
+              Hues with Vaishali is a sustainable Brand that creates products keeping in mind the need of it’s customers .
+              Each product is handpainted, handmade and can also be customised as per the design demands of customers.
+              Most of the products reflect art, culture and beauty of Uttarakhand and also promote folk art of Uttarakhand, Aipan in a more fresh and contemporary way.
+              We solely follow the values of Sustainability and Exclusivity
+             </p>
 
             <NavLink>
               <Button>

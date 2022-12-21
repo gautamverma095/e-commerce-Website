@@ -20,15 +20,16 @@ figure {
   position: relative;
   overflow: hidden;
   /* border: 1px solid green; */
+  /* transition: width 2s, height 2s, background-color 2s, transform 2s; */
   transition: all 0.5s linear;
   &::after {
     content: "";
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: all 0.2s linear;
     cursor: pointer;
   }
@@ -36,7 +37,11 @@ figure {
     width: 100%;
   }
   &:hover img {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
+    background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  rotate: -50deg;
   }
   img {
     /* max-width: 95%; */

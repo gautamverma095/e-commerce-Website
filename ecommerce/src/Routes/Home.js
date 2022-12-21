@@ -8,7 +8,7 @@ import Trusted from '../Components/Trusted'
 
 
  const data = {
-   name:"Vaishali Store"
+   name:"Hues with Vaishali"
 
  }
   return (
