@@ -84,7 +84,9 @@ const Footer = () => {
   <p>TERMS AND CONDITION</p>
   </div>
   </div>
-
+          <div style={{ "textAlign": "center", "marginTop": "2%", "fontWeight": "bold" }}>
+            <h3>Made By Gautam Verma</h3>
+          </div>
   </div>
 
       </footer>
